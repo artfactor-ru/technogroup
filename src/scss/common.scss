@@ -120,12 +120,11 @@
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s ease 0s;
-	&::before {
-		color: $accentColor;
-	}
-
-	@media (max-width: $mobile) {
-		display: none;
+	z-index: 5;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(14, 52, 122, 0.8);
+		}
 	}
 
 	&.swiper-button-disabled {
