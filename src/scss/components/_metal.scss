@@ -1,0 +1,47 @@
+.metal {
+	padding: 100px 0 0 0;
+	background-image: url(../../img/metal-bg.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	&__body {
+	}
+	&__slider {
+	}
+	&__wrapper {
+	}
+	&__slide {
+	}
+	&__slide-body {
+	}
+	&__slide-subtitle {
+		color: #fff;
+		font-size: 36px;
+		font-weight: 800;
+		line-height: 110%;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+}
+
+.slide {
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 20px;
+	}
+	&__item {
+		border-top: 4px solid #5581b7;
+		padding: 62px 86px;
+		text-align: center;
+		a {
+			color: #fff;
+
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 130%;
+		}
+	}
+}

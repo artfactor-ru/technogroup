@@ -1,0 +1,90 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	// outline: none;
+}
+a:focus,
+a:active {
+	// outline: none;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minWidth + px;
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: $mainColor;
+	line-height: 130%;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	//text-rendering: optimizeLegibility;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+	font-family: $fontFamily;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: transparent;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img,
+picture {
+	display: block;
+}
+
+blockquote,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+menu,
+ol,
+ul {
+	list-style: none;
+}
+
+textarea {
+	white-space: revert;
+}
+
+::-moz-placeholder {
+	color: unset;
+}
+
+::placeholder {
+	color: unset;
+}
