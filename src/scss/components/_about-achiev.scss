@@ -1,0 +1,60 @@
+.about-achiev {
+	background-color: #f4f4f4;
+	padding: 140px 0 126px;
+	position: relative;
+	overflow: hidden;
+
+	&__media {
+		position: absolute;
+		left: -27%;
+		top: 15px;
+	}
+
+	&-container {
+		position: relative;
+		z-index: 5;
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+		.title--bl {
+			flex: 0 0 320px;
+			width: 320px;
+		}
+	}
+	&__content {
+		max-width: 770px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 140px;
+		row-gap: 40px;
+	}
+	&__item {
+		width: 350px;
+	}
+	&__count {
+		display: flex;
+		align-items: end;
+		margin-bottom: 30px;
+		span {
+			color: $accentColor;
+			font-size: 96px;
+			font-weight: 800;
+			display: block;
+			line-height: 80px;
+		}
+
+		.count__text {
+			font-size: 48px;
+			line-height: 100%;
+		}
+	}
+	&__text {
+		color: $mainColor;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%;
+	}
+}

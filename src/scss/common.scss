@@ -243,7 +243,7 @@ th {
 }
 
 [data-editor] > :not(:last-child) {
-	margin-bottom: 16px;
+	margin-bottom: 25px;
 }
 
 [data-editor] blockquote {
@@ -291,7 +291,9 @@ th {
 }
 
 [data-editor] li {
-	margin-bottom: 8px;
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
 }
 
 [data-editor] a:not([class*="button"]) {

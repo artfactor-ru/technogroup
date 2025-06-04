@@ -1,0 +1,37 @@
+.about {
+	padding: 140px 0 175px;
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+	}
+	&__content {
+		ul {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				position: relative;
+				padding-left: 20px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 6px; /* подстройка вертикального положения */
+					width: 11px;
+					height: 11px;
+					background-color: #284786;
+					border-radius: 50%; /* делаем кружок */
+				}
+			}
+		}
+	}
+	&__img {
+		border-radius: 8px;
+		overflow: hidden;
+		picture {
+			height: 466px;
+		}
+	}
+}
