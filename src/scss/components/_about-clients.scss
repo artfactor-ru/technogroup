@@ -1,0 +1,23 @@
+.about-clients {
+	padding: 140px 0;
+	&__header {
+		margin-bottom: 50px;
+		.title--bl {
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 20px;
+	}
+	&__item {
+		border-radius: 8px;
+		border: 1px solid#d9d9d9;
+		overflow: hidden;
+	}
+}
+.about-clients-container {
+}

@@ -1,0 +1,47 @@
+.about-decision {
+	background-color: #f4f4f4;
+	padding: 187px 0 140px;
+	position: relative;
+
+	&__media {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	&-container {
+		position: relative;
+		z-index: 5;
+	}
+	&__header {
+		margin-bottom: 50px;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 20px;
+	}
+	&__item {
+		background-color: #fff;
+		border-radius: 8px;
+	}
+	&__img {
+		border-radius: 8px;
+		background: #d6eff9;
+		overflow: hidden;
+		picture {
+			height: 223px;
+		}
+	}
+	&__content {
+		padding: 20px;
+		display: flex;
+		align-items: center;
+	}
+	&__name {
+		color: $mainColor;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 800;
+	}
+}

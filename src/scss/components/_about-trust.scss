@@ -1,0 +1,53 @@
+.about-trust {
+	position: relative;
+	background-color: $accentColor;
+	padding: 140px 0 104px;
+	overflow: hidden;
+	&__media {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&-container {
+	}
+	&__header {
+		margin-bottom: 40px;
+		.title {
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		color: #fff;
+		max-width: 955px;
+	}
+	&__body {
+		position: relative;
+		z-index: 5;
+	}
+	&__slider {
+	}
+	&__wrapper {
+	}
+	&__slide {
+	}
+	&__item {
+	}
+	&__img {
+		border-radius: 8px;
+		overflow: hidden;
+		picture {
+			height: 390px;
+		}
+	}
+	&__content {
+		padding: 13px 0;
+	}
+	&__name {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 800;
+		line-height: 150%;
+	}
+}
