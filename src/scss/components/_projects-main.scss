@@ -62,7 +62,19 @@
 		justify-content: space-between;
 		gap: 30px;
 	}
+	&__wrapper {
+		p {
+			color: $mainColor;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 120%;
+		}
+	}
 	&__name {
 		margin-bottom: 20px;
+		color: $mainColor;
+		font-size: 20px;
+		font-weight: 800;
+		line-height: 120%;
 	}
 }
