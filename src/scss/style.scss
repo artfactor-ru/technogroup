@@ -147,6 +147,8 @@ body {
 // Для подключения / выключения конкретных стилей смотри base.scss
 @import "base";
 
+@import "./components/breadcrumbs";
+
 // Подключение стилей общих элементов проекта
 @import "common";
 
@@ -164,7 +166,8 @@ body {
 @import "./components/about-trust";
 @import "./components/about-clients";
 @import "./components/news";
-@import "./components/breadcrumbs";
+
+@import "./components/news-single";
 
 // Подключение стилей отдельных страниц
 @import "home";
