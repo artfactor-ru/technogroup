@@ -1,4 +1,16 @@
 // Заголовки, общие БЕМ блоки и прочее...
+.main-page {
+	padding-top: 102px;
+	background-color: #f4f4f4;
+}
+
+.main-page-bg {
+	background-image: url(../../img/global/main-page-bg.svg);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: contain;
+}
+
 .title--up {
 	color: #fff;
 	font-size: 48px;
