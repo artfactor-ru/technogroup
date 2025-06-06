@@ -1,0 +1,98 @@
+.subscribe {
+	&__wrapper {
+		background-image: url(../../img/global/subscribe-bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 8px;
+		overflow: hidden;
+		padding: 60px;
+		margin-bottom: 120px;
+	}
+	&__header {
+		margin-bottom: 30px;
+		.title {
+			margin-bottom: 20px;
+		}
+
+		p {
+			color: #fff;
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	&__row {
+		display: flex;
+		gap: 20px;
+	}
+}
+
+.form-consent {
+	margin-bottom: 20px;
+	max-width: 710px;
+}
+
+.custom-checkbox {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.custom-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.checkbox-box {
+	width: 20px;
+	height: 20px;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	position: relative;
+	flex-shrink: 0;
+	transition:
+		border-color 0.3s,
+		background-color 0.3s;
+}
+
+.checkbox-box::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 6px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+input[type="checkbox"]:checked + .checkbox-box {
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+input[type="checkbox"]:checked + .checkbox-box::after {
+	opacity: 1;
+}
+
+.checkbox-text {
+	font-size: 13px;
+	color: #fff;
+}
+
+.checkbox-text a {
+	color: #007bff;
+	text-decoration: underline;
+}
+
+button[disabled] {
+	transition: all 0.3s ease 0s;
+	opacity: 0.6;
+	cursor: not-allowed;
+}

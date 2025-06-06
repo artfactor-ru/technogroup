@@ -4,31 +4,37 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 .input {
-  border-radius: 0 !important;
-  width: 100%;
-  display: block;
-  padding: 0px 20px;
-  border: 1px solid #eee;
-  &._form-focus {
-  }
-  &._form-error {
-  }
+	border-radius: 26px;
+	width: 100%;
+	max-width: 410px;
+	display: block;
+	padding: 0px 48px;
+	border: 1px solid #eee;
+	outline: none;
+	font-size: 16px;
+	font-weight: 500;
+	&._form-focus {
+	}
+	&._form-error {
+	}
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
-  &::placeholder {
-    transition: opacity 0.3s;
-  }
-  &:focus::placeholder {
-    opacity: 0;
-  }
+	&::placeholder {
+		transition: opacity 0.3s;
+		font-size: 16px;
+		font-weight: 500;
+	}
+	&:focus::placeholder {
+		opacity: 0;
+	}
 }
 
 textarea.input {
-  resize: none;
-  padding: 0px 0px;
+	resize: none;
+	padding: 0px 0px;
 }

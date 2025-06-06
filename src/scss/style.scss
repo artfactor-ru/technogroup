@@ -166,8 +166,10 @@ body {
 @import "./components/about-trust";
 @import "./components/about-clients";
 @import "./components/news";
-
-@import "./components/news-single";
+@import "./components/single";
+@import "./components/subscribe-form";
+@import "./components/projects-single";
+@import "./components/other-projects";
 
 // Подключение стилей отдельных страниц
 @import "home";
