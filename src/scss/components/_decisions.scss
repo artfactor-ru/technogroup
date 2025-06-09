@@ -1,0 +1,24 @@
+.decisions {
+	position: relative;
+	z-index: 5;
+	margin-bottom: 100px;
+
+	.title {
+		margin-bottom: 40px;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+
+		.about-decision__img {
+			picture {
+				height: 466px;
+			}
+		}
+	}
+}
+.decisions-container {
+}
+.title {
+}
