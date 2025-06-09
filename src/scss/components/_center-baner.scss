@@ -1,0 +1,23 @@
+.center-baner {
+	margin-bottom: 100px;
+	&__body {
+		padding: 60px;
+		border-radius: 8px;
+		overflow: hidden;
+		background-image: url(../../img/center/baner-bg.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		.title {
+			margin-bottom: 20px;
+		}
+
+		p {
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 150%;
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.center-hero {
+	position: relative;
+	z-index: 5;
+	margin-bottom: 80px;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__content {
+		max-width: 550px;
+
+		.title {
+			margin-bottom: 20px;
+		}
+
+		p {
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 150%;
+			margin-bottom: 40px;
+		}
+	}
+	&__img {
+		border-radius: 8px;
+		overflow: hidden;
+	}
+}

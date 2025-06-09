@@ -1,5 +1,7 @@
 .news {
 	padding: 0 0 120px;
+	position: relative;
+	z-index: 5;
 	&__header {
 		margin-bottom: 20px;
 		display: flex;

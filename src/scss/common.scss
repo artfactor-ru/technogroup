@@ -23,11 +23,24 @@
 	}
 }
 
-.main-page-bg {
+.main-page-bg::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	min-height: 100vh;
 	background-image: url(../../img/global/main-page-bg.svg);
 	background-repeat: no-repeat;
-	background-position: top;
+	background-position: top center;
 	background-size: contain;
+	z-index: 0;
+	pointer-events: none;
+
+	@media (max-width: 1600px) {
+		background-size: cover;
+	}
 }
 
 .main-page-line {

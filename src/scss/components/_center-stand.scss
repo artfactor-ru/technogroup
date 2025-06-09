@@ -1,0 +1,28 @@
+.center-stand {
+	margin-bottom: 100px;
+	.title--bl {
+		margin-bottom: 58px;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	&__item {
+		padding: 45px 30px;
+		background-color: #fff;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+	&__icon {
+		width: 80px;
+		height: 80px;
+		flex: 0 0 80px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 120%;
+	}
+}

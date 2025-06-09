@@ -1,0 +1,27 @@
+.center-advantages {
+	position: relative;
+	z-index: 5;
+	margin-bottom: 100px;
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		border-radius: 8px;
+		background: #fff;
+		padding: 51px 30px;
+	}
+	&__icon {
+		flex: 0 0 68px;
+		width: 68px;
+		height: 68px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: normal;
+	}
+}

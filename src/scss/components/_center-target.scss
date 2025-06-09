@@ -1,0 +1,47 @@
+.center-target {
+	position: relative;
+	padding-bottom: 120px;
+	&__media {
+		position: absolute;
+		right: 0;
+		top: 370px;
+	}
+
+	&__body {
+		position: relative;
+		z-index: 5;
+	}
+	&__header {
+		max-width: 900px;
+		margin-bottom: 50px;
+		.title--bl {
+			margin-bottom: 30px;
+		}
+
+		p {
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding: 25px 30px;
+		border-radius: 8px;
+		background-color: #fff;
+	}
+	&__icon {
+		width: 68px;
+		height: 68px;
+		flex: 0 0 68px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: normal;
+	}
+}
