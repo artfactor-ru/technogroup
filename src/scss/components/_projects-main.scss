@@ -1,7 +1,7 @@
 .projects-main {
 	background-color: #f4f4f4;
 	position: relative;
-	padding: 120px 0 140px;
+	padding: 120px 0 0;
 	overflow: hidden;
 
 	&-container {
@@ -24,7 +24,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
-		margin-bottom: 260px;
+		margin-bottom: 280px;
 	}
 }
 
