@@ -38,7 +38,7 @@ if (document.querySelector(".metal__slider")) {
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
-		autoHeight: true,
+		autoHeight: false,
 		speed: 800,
 
 		//touchRatio: 0,
@@ -116,7 +116,7 @@ if (document.querySelector(".mountain__slider")) {
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
-		autoHeight: true,
+		autoHeight: false,
 		speed: 800,
 
 		//touchRatio: 0,
@@ -194,7 +194,7 @@ if (document.querySelector(".fertilizers__slider")) {
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
-		autoHeight: true,
+		autoHeight: false,
 		speed: 800,
 
 		//touchRatio: 0,
