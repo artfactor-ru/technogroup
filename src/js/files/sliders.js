@@ -33,7 +33,7 @@ if (document.querySelector(".metal__slider")) {
 		// Указываем скласс нужного слайдера
 		// Подключаем модули слайдера
 		// для конкретного случая
-		modules: [Navigation],
+		modules: [Navigation, EffectFade],
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
@@ -47,14 +47,12 @@ if (document.querySelector(".metal__slider")) {
 		//preloadImages: false,
 		//lazy: true,
 
-		/*
-      // Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+		// Эффекты
+		effect: "fade",
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 
 		// Пагинация
 		/*
@@ -76,162 +74,6 @@ if (document.querySelector(".metal__slider")) {
 		navigation: {
 			prevEl: ".metal-prev",
 			nextEl: ".metal-next",
-		},
-		/*
-			// Брейкпоинты
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-		// События
-		on: {},
-	});
-}
-
-if (document.querySelector(".mountain__slider")) {
-	// Указываем скласс нужного слайдера
-	// Создаем слайдер
-	new Swiper(".mountain__slider", {
-		// Указываем скласс нужного слайдера
-		// Подключаем модули слайдера
-		// для конкретного случая
-		modules: [Navigation],
-		observer: true,
-		observeParents: true,
-		slidesPerView: 1,
-		spaceBetween: 0,
-		autoHeight: false,
-		speed: 800,
-
-		//touchRatio: 0,
-		//simulateTouch: false,
-		//loop: true,
-		//preloadImages: false,
-		//lazy: true,
-
-		/*
-      // Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-		// Пагинация
-		/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-		// Скроллбар
-		/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-		// Кнопки "влево/вправо"
-		navigation: {
-			prevEl: ".mountain-prev",
-			nextEl: ".mountain-next",
-		},
-		/*
-			// Брейкпоинты
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-		// События
-		on: {},
-	});
-}
-
-if (document.querySelector(".fertilizers__slider")) {
-	// Указываем скласс нужного слайдера
-	// Создаем слайдер
-	new Swiper(".fertilizers__slider", {
-		// Указываем скласс нужного слайдера
-		// Подключаем модули слайдера
-		// для конкретного случая
-		modules: [Navigation],
-		observer: true,
-		observeParents: true,
-		slidesPerView: 1,
-		spaceBetween: 0,
-		autoHeight: false,
-		speed: 800,
-
-		//touchRatio: 0,
-		//simulateTouch: false,
-		//loop: true,
-		//preloadImages: false,
-		//lazy: true,
-
-		/*
-      // Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-		// Пагинация
-		/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-		// Скроллбар
-		/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-		// Кнопки "влево/вправо"
-		navigation: {
-			prevEl: ".fertilizers-prev",
-			nextEl: ".fertilizers-next",
 		},
 		/*
 			// Брейкпоинты
