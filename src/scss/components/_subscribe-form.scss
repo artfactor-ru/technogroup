@@ -1,8 +1,5 @@
 .subscribe {
 	&__wrapper {
-		background-image: url(../../img/global/subscribe-bg.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
 		border-radius: 8px;
 		overflow: hidden;
 		padding: 60px;
@@ -12,6 +9,8 @@
 	}
 	&__header {
 		margin-bottom: 30px;
+		position: relative;
+		z-index: 5;
 		.title {
 			margin-bottom: 20px;
 		}
@@ -19,6 +18,10 @@
 		p {
 			color: #fff;
 		}
+	}
+	&__form {
+		position: relative;
+		z-index: 5;
 	}
 	&__body {
 		display: flex;
@@ -28,6 +31,15 @@
 	&__row {
 		display: flex;
 		gap: 20px;
+	}
+	&__media {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		height: 100%;
+		picture {
+			height: 100%;
+		}
 	}
 }
 
