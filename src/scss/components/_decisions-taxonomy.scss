@@ -1,4 +1,4 @@
-.decisions {
+.decisions-taxonomy {
 	position: relative;
 	z-index: 5;
 	margin-bottom: 100px;
@@ -12,22 +12,25 @@
 	}
 	&__body {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 20px;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 
 		@media (max-width: $mobile) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
 		.about-decision__img {
-			height: 465px;
+			height: 346px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			padding: 25px;
-
 			@media (max-width: $tablet) {
-				height: 350px;
+				height: 240px;
 				padding: 10px;
 			}
 

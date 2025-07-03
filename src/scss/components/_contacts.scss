@@ -2,6 +2,10 @@
 	position: relative;
 	z-index: 5;
 	margin-bottom: 140px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 50px;
+	}
 	&__header {
 		.title {
 			margin-bottom: 40px;
@@ -13,9 +17,25 @@
 		border-radius: 8px;
 		display: grid;
 		grid-template-columns: 460px 1fr;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 354px 1fr;
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	&__content {
 		padding: 80px 60px 80px 80px;
+
+		@media (max-width: $tablet) {
+			padding: 50px 20px 50px 50px;
+		}
+
+		@media (max-width: $mobile) {
+			padding: 30px;
+		}
 	}
 	&__list {
 		li {
@@ -31,14 +51,37 @@
 				font-size: 13px;
 				font-weight: 500;
 				text-transform: uppercase;
+				@media (max-width: $tablet) {
+					font-size: 11px;
+				}
 			}
 
 			a {
 				font-size: 20px;
 				font-weight: 500;
+
+				@media (max-width: $tablet) {
+					font-size: 15px;
+				}
+			}
+
+			.link__tg {
+				svg {
+					color: $mainColor;
+				}
+
+				span {
+					color: $mainColor;
+					font-size: 15px;
+					font-weight: 500;
+					text-transform: none;
+				}
 			}
 		}
 	}
 	&__map {
+		@media (max-width: $mobile) {
+			height: 330px;
+		}
 	}
 }
