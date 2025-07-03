@@ -9,8 +9,16 @@
 	width: 100%;
 	z-index: 100;
 	transition: background-color 0.3s ease 0s;
+
+	@media (max-width: $tablet) {
+		padding: 8px 0;
+	}
 	&._header-scroll {
 		background-color: rgba(14, 52, 122, 0.8);
+	}
+
+	.menu-open & {
+		background-color: rgba(0, 0, 0, 0.9);
 	}
 
 	&__body {
@@ -19,6 +27,10 @@
 	}
 	&__logo {
 		margin-right: 50px;
+
+		@media (max-width: 1100px) {
+			margin-right: 20px;
+		}
 	}
 	&__menu {
 	}
@@ -27,6 +39,17 @@
 		display: flex;
 		align-items: center;
 		gap: 50px;
+		@media (max-width: 1100px) {
+			gap: 20px;
+		}
+
+		.link__tg {
+			span {
+				@media (max-width: $mobile) {
+					display: none;
+				}
+			}
+		}
 	}
 }
 .menu {
@@ -39,12 +62,24 @@
 		align-items: center;
 		gap: 50px;
 
+		@media (max-width: 1100px) {
+			gap: 20px;
+		}
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
+
 		li {
 			a {
 				color: #fff;
 				font-size: 18px;
 				font-weight: 500;
 				line-height: normal;
+
+				@media (max-width: $tablet) {
+					font-size: 15px;
+				}
 			}
 		}
 	}
@@ -78,6 +113,10 @@
 	@media (any-hover: none) {
 		cursor: default;
 	}
+
+	@media (max-width: 1100px) {
+		margin-right: 20px;
+	}
 	span,
 	&::before,
 	&::after {
@@ -99,19 +138,22 @@
 	span {
 		top: calc(50% - 1px);
 	}
-	// .menu-open & {
-	// 	span {
-	// 		width: 0;
-	// 	}
-	// 	&::before {
-	// 		top: calc(50% - 1px);
-	// 		transform: rotate(-45deg);
-	// 	}
-	// 	&::after {
-	// 		bottom: calc(50% - 2px);
-	// 		transform: rotate(45deg);
-	// 	}
-	// }
+
+	@media (max-width: $mobile) {
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before {
+				top: calc(50% - 1px);
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - 2px);
+				transform: rotate(45deg);
+			}
+		}
+	}
 }
 
 .modal-menu {
@@ -119,17 +161,21 @@
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	top: 0;
+	top: 93px;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	z-index: 1000;
-	padding: 90px 0;
+	padding: 40px 0 140px;
 	max-height: 100%;
 	overflow-y: scroll;
 	transition: all 0.3s ease 0s;
 	opacity: 0;
 	visibility: hidden;
+
+	@media (max-width: $tablet) {
+		top: 47px;
+	}
 
 	.menu-open & {
 		opacity: 1;
@@ -140,18 +186,38 @@
 		grid-template-columns: repeat(2, 1fr);
 		position: relative;
 		gap: 140px;
+
+		@media (max-width: $tablet) {
+			gap: 20px;
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	&__list {
 		max-width: 480px;
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 		li {
 			&:not(:last-child) {
 				margin-bottom: 30px;
+
+				@media (max-width: $tablet) {
+					margin-bottom: 20px;
+				}
 			}
 			a {
 				color: #fff;
 				font-size: 30px;
 				font-weight: 800;
 				line-height: 110%;
+
+				@media (max-width: $tablet) {
+					font-size: 20px;
+				}
 			}
 
 			.sub-menu {
@@ -169,6 +235,10 @@
 						font-size: 18px;
 						font-weight: 500;
 						line-height: 110%;
+
+						@media (max-width: $tablet) {
+							font-size: 14px;
+						}
 					}
 				}
 			}
@@ -179,6 +249,7 @@
 			opacity: 1;
 			visibility: visible;
 			display: block;
+			margin-bottom: 40px;
 		}
 
 		.menu-item-has-children {
@@ -195,17 +266,29 @@
 				top: 3px;
 				right: 0;
 				cursor: pointer;
+
+				@media (max-width: $mobile) {
+					top: -4px;
+				}
 			}
 		}
 	}
 	&__contacts {
 		max-width: 330px;
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 		li {
 			display: flex;
 			flex-direction: column;
 			gap: 3px;
 			&:not(:last-child) {
 				margin-bottom: 30px;
+
+				@media (max-width: $mobile) {
+					margin-bottom: 20px;
+				}
 			}
 			span {
 				display: inline-block;
@@ -213,12 +296,20 @@
 				font-size: 13px;
 				font-weight: 500;
 				text-transform: uppercase;
+
+				@media (max-width: $mobileSmall) {
+					font-size: 11px;
+				}
 			}
 
 			a {
 				color: #fff;
 				font-size: 20px;
 				font-weight: 500;
+
+				@media (max-width: $mobile) {
+					font-size: 15px;
+				}
 			}
 		}
 	}

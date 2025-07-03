@@ -33,7 +33,7 @@ if (document.querySelector(".metal__slider")) {
 		// Указываем скласс нужного слайдера
 		// Подключаем модули слайдера
 		// для конкретного случая
-		modules: [Navigation, EffectFade],
+		modules: [Navigation, Pagination, EffectFade],
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
@@ -55,12 +55,11 @@ if (document.querySelector(".metal__slider")) {
 		},
 
 		// Пагинация
-		/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
+
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 
 		// Скроллбар
 		/*
@@ -102,6 +101,101 @@ if (document.querySelector(".metal__slider")) {
 	});
 }
 
+let projectsSlider = null;
+let newsSlider = null;
+let clientsSlider = null;
+
+function initSliders() {
+	const sliderElement = document.querySelector(".projects-main__slider");
+	const newsElement = document.querySelector(".news-main__slider");
+	const clientsElement = document.querySelector(".about-clients__slider");
+
+	// Инициализация projectsSlider, если элемент существует
+	if (sliderElement) {
+		if (window.innerWidth < 1367 && !projectsSlider) {
+			projectsSlider = new Swiper(sliderElement, {
+				modules: [Navigation, Pagination],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoHeight: false,
+				speed: 800,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				breakpoints: {
+					320: { slidesPerView: 1, spaceBetween: 20 },
+					768: { slidesPerView: 2, spaceBetween: 20 },
+					992: { slidesPerView: 3, spaceBetween: 20 },
+				},
+			});
+		} else if (window.innerWidth >= 1367 && projectsSlider) {
+			projectsSlider.destroy(true, true);
+			projectsSlider = null;
+		}
+	}
+
+	// Инициализация newsSlider, если элемент существует
+	if (newsElement) {
+		if (window.innerWidth < 1367 && !newsSlider) {
+			newsSlider = new Swiper(newsElement, {
+				modules: [Navigation, Pagination],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoHeight: false,
+				speed: 800,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				breakpoints: {
+					320: { slidesPerView: 1, spaceBetween: 20 },
+					768: { slidesPerView: 2, spaceBetween: 20 },
+					992: { slidesPerView: 3, spaceBetween: 20 },
+				},
+			});
+		} else if (window.innerWidth >= 1367 && newsSlider) {
+			newsSlider.destroy(true, true);
+			newsSlider = null;
+		}
+	}
+
+	// Инициализация projectsSlider, если элемент существует
+	if (clientsElement) {
+		if (window.innerWidth < 768 && !clientsSlider) {
+			clientsSlider = new Swiper(clientsElement, {
+				modules: [Navigation, Pagination],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoHeight: false,
+				speed: 800,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				breakpoints: {
+					320: { slidesPerView: 3, spaceBetween: 10 },
+					768: { slidesPerView: 3, spaceBetween: 20 },
+				},
+			});
+		} else if (window.innerWidth >= 768 && clientsSlider) {
+			clientsSlider.destroy(true, true);
+			clientsSlider = null;
+		}
+	}
+}
+
+// Инициализация при загрузке
+window.addEventListener("load", initSliders);
+// Проверка при изменении размера окна
+window.addEventListener("resize", initSliders);
+
 if (document.querySelector(".about-trust__slider")) {
 	// Указываем скласс нужного слайдера
 	// Создаем слайдер
@@ -109,7 +203,7 @@ if (document.querySelector(".about-trust__slider")) {
 		// Указываем скласс нужного слайдера
 		// Подключаем модули слайдера
 		// для конкретного случая
-		modules: [Navigation],
+		modules: [Navigation, Pagination],
 		observer: true,
 		observeParents: true,
 		slidesPerView: 5,
@@ -133,12 +227,11 @@ if (document.querySelector(".about-trust__slider")) {
 			*/
 
 		// Пагинация
-		/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
+
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 
 		// Скроллбар
 		/*
@@ -153,28 +246,23 @@ if (document.querySelector(".about-trust__slider")) {
 			prevEl: ".about-trust-prev",
 			nextEl: ".about-trust-next",
 		},
-		/*
-			// Брейкпоинты
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+
+		// Брейкпоинты
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
 			},
-			*/
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1366: {
+				slidesPerView: 5,
+			},
+		},
+
 		// События
 		on: {},
 	});

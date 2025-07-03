@@ -1,11 +1,27 @@
 .about {
 	padding: 140px 0 175px;
+
+	@media (max-width: $tablet) {
+		padding: 50px 0;
+	}
 	&__body {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 40px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
+	}
+
+	&__wrapper {
+		@media (max-width: $mobile) {
+			display: contents;
+		}
 	}
 	&__content {
+		margin-bottom: 20px;
 		ul {
 			list-style: none;
 			padding-left: 0;
@@ -26,12 +42,19 @@
 				}
 			}
 		}
+
+		&:first-child {
+			@media (max-width: $mobile) {
+				order: -1;
+			}
+		}
 	}
 	&__img {
 		border-radius: 8px;
 		overflow: hidden;
-		picture {
-			height: 466px;
+
+		@media (max-width: $mobile) {
+			order: -1;
 		}
 	}
 }

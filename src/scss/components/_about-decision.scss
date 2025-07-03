@@ -3,11 +3,31 @@
 	padding: 187px 0 140px;
 	position: relative;
 
+	@media (max-width: $tablet) {
+		padding: 117px 0 43px;
+	}
+
+	@media (max-width: $mobile) {
+		padding: 50px 0 43px;
+	}
+
 	&__media {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
+
+		@media (max-width: $tablet) {
+			top: 67px;
+		}
+
+		@media (max-width: $mobile) {
+			top: 0;
+		}
+
+		img {
+			min-height: 185px;
+		}
 	}
 	&-container {
 		position: relative;
@@ -20,6 +40,14 @@
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		gap: 20px;
+
+		@media (max-width: 1366px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 	&__item {
 		background-color: #fff;
@@ -37,11 +65,19 @@
 		padding: 20px;
 		display: flex;
 		align-items: center;
+
+		@media (max-width: $mobile) {
+			padding: 20px 10px;
+		}
 	}
 	&__name {
 		color: $mainColor;
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 800;
+
+		@media (max-width: $tablet) {
+			font-size: 12px;
+		}
 	}
 }

@@ -2,7 +2,10 @@
     <div class="header-container">
         <div class="header__body">
             <a href="#" class="header__logo">
-                <img src="@img/global/logo.svg" alt="">
+                <picture>
+                    <source srcset="@img/global/logo-mobile.svg" media="(max-width: 991px)" />
+                    <img src="@img/global/logo.svg" alt="Техногрупп" />
+                </picture>
             </a>
             <button type="button" class="menu__icon icon-menu"><span></span></button>
             <div class="header__menu menu">

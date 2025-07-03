@@ -1,10 +1,6 @@
 .other-projects {
 	margin-bottom: 100px;
 	&__body {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 20px;
-
 		.projects__img {
 			margin-bottom: 0;
 			&::before {

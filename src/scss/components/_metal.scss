@@ -20,9 +20,19 @@
 		padding: 100px 0 0 0;
 		position: relative;
 		z-index: 2;
+		@media (max-width: 1366px) {
+			padding: 80px 0 0 0;
+		}
+
+		@media (max-width: $tablet) {
+			padding: 50px 0 0 0;
+		}
 	}
 	&__slider {
 		position: relative;
+		.swiper-pagination {
+			bottom: 10px;
+		}
 	}
 	&__wrapper {
 	}
@@ -30,16 +40,55 @@
 		&:first-child {
 			.metal__slide__content {
 				margin-bottom: 178px;
+				@media (max-width: 1366px) {
+					margin-bottom: 207px;
+				}
+
+				@media (max-width: $tablet) {
+					margin-bottom: 168px;
+				}
+
+				@media (max-width: $mobile) {
+					margin-bottom: 288px;
+				}
 				.title--up {
 					margin-bottom: 172px;
+					@media (max-width: 1366px) {
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			.metal__slide__content {
+				@media (max-width: $mobile) {
+					margin-bottom: 167px;
+				}
+
+				@media (max-width: $mobileSmall) {
+					margin-bottom: 150px;
 				}
 			}
 		}
 	}
 	&__slide__content {
 		margin-bottom: 87px;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 48px;
+		}
 		.title--up {
 			margin-bottom: 57px;
+
+			@media (max-width: 1366px) {
+				font-size: 28px;
+				margin-bottom: 20px;
+			}
+
+			@media (max-width: $mobile) {
+				font-size: 22px;
+			}
 		}
 	}
 	&__slide-body {
@@ -53,6 +102,10 @@
 		line-height: 110%;
 		text-transform: uppercase;
 		margin-bottom: 30px;
+		@media (max-width: 1366px) {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -61,13 +114,24 @@
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		column-gap: 20px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
 	}
 	&__item {
 		position: relative;
 		padding: 62px 30px;
 		text-align: center;
 		height: 205px;
+		@media (max-width: 1366px) {
+			padding: 32px 30px;
+			height: 120px;
+		}
 
+		@media (max-width: $mobile) {
+			padding: 30px 5px;
+		}
 		&::before {
 			content: "";
 			width: 100%;
@@ -85,6 +149,9 @@
 			font-style: normal;
 			font-weight: 800;
 			line-height: 130%;
+			@media (max-width: 1366px) {
+				font-size: 13px;
+			}
 		}
 	}
 }

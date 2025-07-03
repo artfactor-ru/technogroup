@@ -1,8 +1,16 @@
 .projects-main {
 	background-color: #f4f4f4;
 	position: relative;
-	padding: 120px 0 0;
+	padding: 120px 0 93px;
 	overflow: hidden;
+
+	@media (max-width: 1366px) {
+		padding: 80px 0;
+	}
+
+	@media (max-width: $tablet) {
+		padding: 50px 0;
+	}
 
 	&-container {
 		position: relative;
@@ -10,8 +18,26 @@
 	}
 	&__media {
 		position: absolute;
-		top: -190px;
+		top: -270px;
 		right: -440px;
+		img {
+			width: 100%;
+		}
+
+		@media (max-width: 1366px) {
+			max-width: 823px;
+			top: -116px;
+			right: -312px;
+		}
+
+		@media (max-width: $tablet) {
+			top: -83px;
+			right: -331px;
+		}
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 	&__header {
 		display: flex;
@@ -19,40 +45,50 @@
 		justify-content: space-between;
 		gap: 10px;
 		margin-bottom: 30px;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 20px;
+		}
 	}
 	&__body {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-		margin-bottom: 280px;
+		margin-bottom: 120px;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 72px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		padding: 30px 0;
+		margin: -30px 0;
+	}
+
+	&__wrapper {
+		@media (min-width: 1367px) {
+			display: grid !important;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px;
+		}
 	}
 }
 
 .projects {
 	&__item {
 		background-color: #fff;
-		padding: 30px;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		height: 100%;
+		border-radius: 8px;
 	}
 	&__img {
-		margin-bottom: 40px;
 		position: relative;
 
 		picture {
-			height: 270px;
+			height: 230px;
 			border-radius: 8px;
 			overflow: hidden;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			width: 102px;
-			height: 1px;
-			background-color: $linkColor;
-			bottom: -20px;
-			left: 0;
 		}
 	}
 
@@ -76,6 +112,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 30px;
+		padding: 15px;
 	}
 	&__wrapper {
 		p {
@@ -88,7 +125,7 @@
 	&__name {
 		margin-bottom: 20px;
 		color: $mainColor;
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 800;
 		line-height: 120%;
 	}

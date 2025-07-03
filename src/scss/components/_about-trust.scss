@@ -3,17 +3,27 @@
 	background-color: $accentColor;
 	padding: 140px 0 104px;
 	overflow: hidden;
+
+	@media (max-width: $tablet) {
+		padding: 50px 0 70px;
+	}
 	&__media {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
+
+		picture {
+			height: 100%;
+		}
 	}
 	&-container {
 	}
 	&__header {
 		margin-bottom: 40px;
+		position: relative;
+		z-index: 5;
 		.title {
 			margin-bottom: 20px;
 		}
@@ -21,12 +31,18 @@
 	&__text {
 		color: #fff;
 		max-width: 955px;
+
+		@media (max-width: $mobile) {
+			font-size: 14px;
+		}
 	}
 	&__body {
 		position: relative;
 		z-index: 5;
 	}
 	&__slider {
+		padding: 30px 0;
+		margin: -30px 0;
 	}
 	&__wrapper {
 	}
@@ -37,8 +53,11 @@
 	&__img {
 		border-radius: 8px;
 		overflow: hidden;
-		picture {
-			height: 390px;
+
+		@media (min-width: $tablet) {
+			picture {
+				height: 390px;
+			}
 		}
 	}
 	&__content {
