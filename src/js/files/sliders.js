@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Navigation, Scrollbar, Pagination, Thumbs, EffectFade } from "swiper/modules";
+import { Navigation, Scrollbar, Pagination, Thumbs, EffectFade, Autoplay } from "swiper/modules";
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -33,17 +33,16 @@ if (document.querySelector(".metal__slider")) {
 		// Указываем скласс нужного слайдера
 		// Подключаем модули слайдера
 		// для конкретного случая
-		modules: [Navigation, Pagination, EffectFade],
+		modules: [Navigation, Pagination, EffectFade, Autoplay],
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
 		autoHeight: false,
 		speed: 800,
-
 		//touchRatio: 0,
 		//simulateTouch: false,
-		//loop: true,
+		loop: true,
 		//preloadImages: false,
 		//lazy: true,
 

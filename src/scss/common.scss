@@ -405,6 +405,43 @@ th {
 [data-editor] h6 {
 	color: $accentColor;
 }
+[data-editor] h1 {
+	font-size: 30px;
+	@media (max-width: $tablet) {
+		font-size: 24px;
+	}
+}
+[data-editor] h2 {
+	font-size: 28px;
+	@media (max-width: $tablet) {
+		font-size: 22px;
+	}
+}
+[data-editor] h3 {
+	font-size: 26px;
+	@media (max-width: $tablet) {
+		font-size: 20px;
+	}
+}
+[data-editor] h4 {
+	font-size: 24px;
+	@media (max-width: $tablet) {
+		font-size: 18px;
+	}
+}
+[data-editor] h5 {
+	font-size: 22px;
+	@media (max-width: $tablet) {
+		font-size: 16px;
+	}
+}
+
+[data-editor] h6 {
+	font-size: 20px;
+	@media (max-width: $tablet) {
+		font-size: 14px;
+	}
+}
 
 [data-editor] > :not(:last-child) {
 	margin-bottom: 25px;

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Верстка «technogroup»</title>
+</head>
+
+<body>
+	<main>
+		<div class="root-page__body">
+			<h1>Верстка «technogroup»</h1>
+
+			<div class="root-page__content">
+				<div class="root-page__grid">
+					<div class="root-page__col">
+						<h2>Основные страницы</h2>
+						<ol>
+							<li><a href="page-home.html" target="_blank">Главная</a></li>
+							<li><a href="page-about.html" target="_blank">О компании</a></li>
+							<li><a href="page-center.html" target="_blank">Учебный центр</a></li>
+							<li><a href="page-advantages.html" target="_blank">Преимущества</a></li>
+							<li><a href="page-contacts.html" target="_blank">Контакты</a></li>
+						</ol>
+					</div>
+
+					<div class="root-page__col">
+						<h2>Каталожные страницы</h2>
+						<ol>
+							<li><a href="page-archive-news.html" target="_blank">Новости архивная</a></li>
+							<li><a href="page-archive-projects.html" target="_blank">Проекты архивная</a></li>
+							<li><a href="page-decisions.html" target="_blank">Решения архивная</a></li>
+							<li><a href="page-decisions-taxonomy.html" target="_blank">Решения категория</a></li>
+						</ol>
+					</div>
+
+					<div class="root-page__col">
+						<h2>Внутренние страницы</h2>
+						<ol>
+							<li><a href="page-single-news.html" target="_blank">Новость детальная</a></li>
+							<li><a href="page-single-projects.html" target="_blank">Проекты детальная</a></li>
+						</ol>
+					</div>
+
+					<div class="root-page__col">
+						<h2>Другие страницы</h2>
+						<ol>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="root-page__footer">
+				<p>Фигма: <a target="_blank" href="https://www.figma.com/design/GPE3Nu9gYv3EuOlCyo3Vfm/technogroupp.com-%D0%B4%D0%BB%D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2?node-id=0-1&m=dev">/ссылка/</a>
+				</p>
+			</div>
+		</div>
+	</main>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	.root-page__body {
+		position: relative;
+
+		margin: 24px;
+		font-size: 18px;
+		color: #242424;
+	}
+
+	.root-page__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		min-height: 75vh;
+		border: 1px dashed #d6d6d6;
+		border-bottom: none;
+	}
+
+	.root-page__col:not(:last-child) {
+		border-right: 1px dashed #d6d6d6;
+	}
+
+	.root-page__col {
+		padding: 24px;
+	}
+
+	.root-page__footer {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding: 24px;
+
+		background-color: #ffffff;
+	}
+
+	h1 {
+		margin-bottom: 24px;
+
+		font-size: 40px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	h2 {
+		margin-bottom: 16px;
+
+		font-weight: 500;
+		font-size: 24px;
+	}
+
+	ol li:not(:last-child) {
+		margin-bottom: 16px;
+	}
+
+	ol {
+		list-style: decimal;
+		padding-left: 20px;
+	}
+
+	a {
+		padding: 8px 0;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	a:hover {
+		color: #ff6536;
+	}
+
+	@media screen and (max-width: 991px) {
+		h1 {
+			font-size: 24px;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 18px;
+		}
+
+		.root-page__body {
+			margin: 24px 12px;
+			font-size: 14px;
+		}
+
+		.root-page__grid {
+			grid-template-columns: 1fr;
+			min-height: 100vh;
+
+			margin-bottom: 120px;
+			border-bottom: 1px dashed #d6d6d6;
+		}
+
+		.root-page__col {
+			padding: 16px 12px;
+		}
+
+		.root-page__col:not(:first-child) {
+			border-top: 1px dashed #d6d6d6;
+		}
+
+		.root-page__footer {
+			padding: 16px;
+		}
+	}
+</style>
+
+</html>

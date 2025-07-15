@@ -37,7 +37,12 @@
 	&__wrapper {
 	}
 	&__slide {
-		&:first-child {
+		pointer-events: none;
+		transition-property: opacity;
+		&.swiper-slide-active {
+			pointer-events: auto;
+		}
+		&[data-swiper-slide-index="0"] {
 			.metal__slide__content {
 				margin-bottom: 178px;
 				@media (max-width: 1366px) {
@@ -60,7 +65,7 @@
 			}
 		}
 
-		&:nth-child(3) {
+		&[data-swiper-slide-index="2"] {
 			.metal__slide__content {
 				@media (max-width: $mobile) {
 					margin-bottom: 167px;

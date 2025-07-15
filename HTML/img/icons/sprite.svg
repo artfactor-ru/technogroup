@@ -1,0 +1,19 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 22" id="ar-left">
+    <path d="M10.7992 20.6L1.19922 11L10.7992 1.40002" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" id="ar-link">
+    <path d="M1 7H17M17 7L11 13M17 7L11 1" stroke="#009CDE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 22" id="ar-right">
+    <path d="M1.20078 20.6L10.8008 11L1.20078 1.40002" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76" id="close">
+    <path d="M57 19L19 57" stroke="#82ACC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M19 19L57 57" stroke="#82ACC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="tg">
+    <rect x="1" y="1" width="30" height="30" rx="15" stroke="currentColor" stroke-linejoin="bevel"></rect>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16397 15.7814C12.7264 13.8119 15.7637 12.5032 17.2889 11.8683C21.6298 10.0673 22.5422 9.7563 23.1289 9.74335C23.2592 9.74335 23.546 9.76926 23.7415 9.92475C23.898 10.0543 23.9371 10.2228 23.9631 10.3523C23.9892 10.4819 24.0153 10.754 23.9892 10.9613C23.7546 13.4232 22.7378 19.3965 22.2164 22.1434C21.9948 23.3096 21.5646 23.6983 21.1474 23.7372C20.2349 23.8149 19.5441 23.1412 18.6707 22.571C17.2889 21.677 16.5198 21.1198 15.1771 20.2387C13.6259 19.2281 14.6296 18.6709 15.5161 17.7639C15.7507 17.5307 19.7526 13.9026 19.8308 13.5787C19.8439 13.5398 19.8439 13.3843 19.7526 13.3066C19.6614 13.2289 19.531 13.2548 19.4267 13.2807C19.2833 13.3066 17.0934 14.7578 12.8307 17.6214C12.205 18.049 11.6445 18.2563 11.1361 18.2433C10.5756 18.2304 9.50664 17.9323 8.69843 17.6732C7.72076 17.3622 6.93862 17.1938 7.0038 16.6496C7.04291 16.3645 7.43397 16.0794 8.16397 15.7814Z" fill="currentColor"></path>
+  </symbol>
+</svg>
