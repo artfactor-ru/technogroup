@@ -1,6 +1,9 @@
 .center-target {
 	position: relative;
 	padding-bottom: 120px;
+	@media (max-width: $tablet) {
+		padding-bottom: 50px;
+	}
 	&__media {
 		position: absolute;
 		right: 0;
@@ -12,13 +15,24 @@
 		z-index: 5;
 	}
 	&__header {
-		max-width: 900px;
-		margin-bottom: 50px;
+		max-width: 50%;
+		margin-bottom: 100px;
+
+		@media (max-width: $tablet) {
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 		.title--bl {
 			margin-bottom: 30px;
 		}
 
 		p {
+			@media (max-width: $tablet) {
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -26,6 +40,15 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 10px;
+		}
 	}
 	&__item {
 		display: flex;
@@ -34,6 +57,21 @@
 		padding: 25px 30px;
 		border-radius: 8px;
 		background-color: #fff;
+
+		@media (max-width: $tablet) {
+			padding: 20px;
+			&:nth-child(2) {
+				order: 1;
+				grid-column: span 2;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			&:nth-child(2) {
+				order: 0;
+				grid-column: span 1;
+			}
+		}
 	}
 	&__icon {
 		width: 68px;
@@ -43,5 +81,9 @@
 	&__text {
 		font-size: 16px;
 		line-height: normal;
+
+		@media (max-width: $tablet) {
+			font-size: 14px;
+		}
 	}
 }

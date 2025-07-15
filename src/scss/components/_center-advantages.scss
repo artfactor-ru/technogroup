@@ -2,10 +2,22 @@
 	position: relative;
 	z-index: 5;
 	margin-bottom: 100px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 50px;
+	}
 	&__body {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 10px;
+		}
 	}
 	&__item {
 		display: flex;
@@ -14,6 +26,22 @@
 		border-radius: 8px;
 		background: #fff;
 		padding: 51px 30px;
+		@media (max-width: $tablet) {
+			&:nth-child(2) {
+				order: 1;
+				grid-column: span 2;
+			}
+
+			padding: 20px;
+			gap: 20px;
+		}
+
+		@media (max-width: $mobile) {
+			&:nth-child(2) {
+				order: 0;
+				grid-column: span 1;
+			}
+		}
 	}
 	&__icon {
 		flex: 0 0 68px;
@@ -23,5 +51,9 @@
 	&__text {
 		font-size: 16px;
 		line-height: normal;
+
+		@media (max-width: $tablet) {
+			font-size: 14px;
+		}
 	}
 }

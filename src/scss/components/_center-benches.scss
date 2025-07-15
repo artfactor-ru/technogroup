@@ -1,14 +1,24 @@
 .center-benches {
 	margin-bottom: 100px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 50px;
+	}
 	&__body {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 	&__content {
 	}
 	&__img {
-		border-radius: 8px;
-		overflow: hidden;
+		picture {
+			border-radius: 8px;
+			overflow: hidden;
+		}
 	}
 }

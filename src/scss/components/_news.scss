@@ -32,7 +32,7 @@
 		}
 
 		@media (min-width: $tablet) {
-			.news__item:nth-child(7n + 1) {
+			.news__item:nth-child(11n + 1) {
 				grid-column: span 2;
 				grid-row: span 2;
 
@@ -70,7 +70,7 @@
 		}
 
 		@media (min-width: $tablet) {
-			.projects__item:nth-child(7n + 1) {
+			.projects__item:nth-child(11n + 1) {
 				grid-column: span 2;
 				grid-row: span 2;
 
@@ -138,11 +138,10 @@
 		}
 	}
 	&__name {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 		color: $mainColor;
 		font-weight: 800;
 		font-size: 16px;
-		line-height: 120%;
 	}
 	&__date {
 		color: #5d666f;

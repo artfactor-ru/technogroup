@@ -110,11 +110,11 @@
 	font-weight: 800;
 	line-height: 110%;
 	@media (max-width: 1366px) {
-		font-size: 28px;
+		font-size: 30px;
 	}
 
 	@media (max-width: $mobile) {
-		font-size: 20px;
+		font-size: 22px;
 	}
 }
 
@@ -129,6 +129,10 @@
 		border: none;
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
+
+		@media (max-width: $mobile) {
+			font-size: 13px;
+		}
 	}
 
 	&-close {
