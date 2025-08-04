@@ -18,7 +18,7 @@
 	}
 
 	.menu-open & {
-		background-color: rgba(0, 0, 0, 0.9);
+		background-color: rgba(0, 0, 0, 1);
 	}
 
 	&__body {
@@ -157,7 +157,7 @@
 }
 
 .modal-menu {
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 1);
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
