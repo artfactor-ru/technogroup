@@ -43,9 +43,9 @@
 
 	&__wrapper {
 		@media (min-width: 768px) {
-			display: grid !important;
-			grid-template-columns: repeat(6, 1fr);
-			gap: 20px;
+			// display: grid !important;
+			// grid-template-columns: repeat(6, 1fr);
+			// gap: 20px;
 		}
 	}
 }

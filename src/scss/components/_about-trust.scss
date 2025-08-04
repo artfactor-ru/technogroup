@@ -44,9 +44,15 @@
 		padding: 30px 0;
 		margin: -30px 0;
 	}
-	&__wrapper {
+	&__wrapper { 
 	}
 	&__slide {
+	}
+	&-prev {
+		left: -80px;
+	}
+	&-next {
+		right: -80px;
 	}
 	&__item {
 	}
