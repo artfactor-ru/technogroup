@@ -17,9 +17,9 @@
         background-color: rgba(14, 52, 122, 1);
     }
 
-    .menu-open & {
-        background-color: rgba(0, 0, 0, 1);
-    }
+	.menu-open & {
+		background-color: rgba(0, 0, 0, 1);
+	}
 
     &__body {
         display: flex;
@@ -189,21 +189,21 @@
 }
 
 .modal-menu {
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 93px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    padding: 40px 0 140px;
-    max-height: 100%;
-    overflow-y: scroll;
-    transition: all 0.3s ease 0s;
-    opacity: 0;
-    visibility: hidden;
+	background-color: rgba(0, 0, 0, 1);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 93px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	padding: 40px 0 140px;
+	max-height: 100%;
+	overflow-y: scroll;
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+	visibility: hidden;
 
     @media (max-width: $tablet) {
         top: 47px;

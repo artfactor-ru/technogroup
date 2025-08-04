@@ -7,6 +7,12 @@
 	@media (max-width: $tablet) {
 		padding: 50px 0 70px;
 	}
+
+	.about-trust-prev,
+	.about-trust-next {
+		top: 62%;
+	}
+
 	&__media {
 		position: absolute;
 		top: 0;
