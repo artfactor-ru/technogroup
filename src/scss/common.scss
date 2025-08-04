@@ -17,18 +17,28 @@
         margin-bottom: 50px;
     }
     li {
+        display: flex;
         border: 1px solid $linkColor;
-        padding: 8px 20px;
         border-radius: 26px;
         background: rgba(1, 51, 113, 0.66);
         backdrop-filter: blur(5.6px);
+        transition: background 0.3s;
         a {
+            padding: 8px 20px;
             color: $linkColor;
             font-size: 16px;
             font-weight: 500;
+            transition: color 0.3s;
 
             @media (max-width: $tablet) {
                 font-size: 13px;
+            }
+        }
+        &:hover {
+            background: $linkColor;
+
+            a{
+                color: #fff;
             }
         }
     }
@@ -126,12 +136,17 @@
         padding: 16px 48px;
         border-radius: 26px;
         background: #009cde;
-        border: none;
+        border: 1px solid #009cde;
         cursor: pointer;
         transition: all 0.3s ease 0s;
 
         @media (max-width: $mobile) {
             font-size: 13px;
+        }
+
+        &:not([disabled]):hover{
+            color: $linkColor;
+            background: transparent;
         }
     }
 

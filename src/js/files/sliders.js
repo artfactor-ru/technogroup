@@ -172,7 +172,6 @@ function initSliders() {
             slidesPerView: 3,
             spaceBetween: 20,
             autoHeight: false,
-            freeMode: true,
             loop: true,
             speed: 2000,
             autoplay: {
