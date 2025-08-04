@@ -143,6 +143,10 @@ input[type="checkbox"]:checked + .checkbox-box::after {
 .checkbox-text a {
 	color: #007bff;
 	text-decoration: underline;
+
+	&:hover{
+		color: #fff;
+	}
 }
 
 button[disabled] {
