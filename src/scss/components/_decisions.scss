@@ -8,7 +8,18 @@
 	}
 
 	.title {
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		align-items: center;
 		margin-bottom: 40px;
+
+		.decisions__media {
+			width: 220px;
+		}
 	}
 	&__body {
 		display: grid;
