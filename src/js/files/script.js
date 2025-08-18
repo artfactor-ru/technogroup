@@ -138,7 +138,10 @@ if (videoWrappers.length > 0) {
 
 document.addEventListener("DOMContentLoaded", () => {
 	const section = document.querySelector(".advantages-work");
+	if (!section) return; // Выходим, если секции нет
+
 	const items = gsap.utils.toArray(".advantages-work .item");
+	if (!items.length) return; // Выходим, если нет элементов
 
 	let tl = null;
 	let isMobile = window.innerWidth < 768;
@@ -146,18 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Группы для аккордеона: [заголовок, содержимое]
 	const accordionGroups = [
-		{
-			header: 0, // step-1 (индекс 0)
-			content: [1, 2, 3, 4, 5, 6], // step-2 до step-7
-		},
-		{
-			header: 7, // step-8 (индекс 7)
-			content: [8, 9, 10, 11, 12], // step-9 до step-13
-		},
-		{
-			header: 13, // step-14 (индекс 13)
-			content: [14, 15, 16], // step-15 до step-17
-		},
+		{ header: 0, content: [1, 2, 3, 4, 5, 6] },
+		{ header: 7, content: [8, 9, 10, 11, 12] },
+		{ header: 13, content: [14, 15, 16] },
 	];
 
 	const createDesktopAnimation = () => {
@@ -191,98 +185,79 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const setupDesktop = () => {
-		// Убиваем предыдущую анимацию
+		if (!items.length) return;
+
 		if (tl) {
 			tl.kill();
 			tl = null;
 		}
 
-		// Полный сброс всех стилей и обработчиков
 		items.forEach((item) => {
+			if (!item) return;
 			item.onclick = null;
 			item.style.cursor = "";
 			item.classList.remove("accordion-header", "accordion-content", "accordion-open");
 
-			// Удаляем индикаторы аккордеона
 			const headerSpan = item.querySelector("span");
 			if (headerSpan) {
 				const indicator = headerSpan.querySelector(".accordion-indicator");
-				if (indicator) {
-					indicator.remove();
-				}
+				if (indicator) indicator.remove();
 			}
 
-			// Полный сброс всех стилей
 			gsap.set(item, { clearProps: "all" });
-			item.style.display = "block"; // Показываем все элементы
+			item.style.display = "block";
 		});
 
-		// Сбрасываем флаг анимации при переходе с мобильного
 		isAnimationPlayed = false;
-
-		// Создаем новую анимацию
 		createDesktopAnimation();
 
-		// Если секция уже в viewport, сразу запускаем анимацию
 		const rect = section.getBoundingClientRect();
 		const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
 
 		if (isInViewport && tl) {
 			tl.play();
-		} else {
-			// Иначе подключаем observer
+		} else if (observer && section) {
 			observer.observe(section);
 		}
 	};
 
 	const setupMobileAccordion = () => {
-		// Убиваем GSAP анимацию
+		if (!items.length) return;
+
 		if (tl) {
 			tl.kill();
 			tl = null;
 		}
 
-		// Сброс GSAP стилей для всех элементов и их дочерних элементов
 		items.forEach((item) => {
+			if (!item) return;
 			gsap.set(item, { clearProps: "all" });
 
-			// Сбрасываем стили для arrow-1 и arrow-2
 			const arrow1 = item.querySelector(".arrow-1");
 			const arrow2 = item.querySelector(".arrow-2");
 
-			if (arrow1) {
-				gsap.set(arrow1, { clearProps: "all" });
-				// Принудительно устанавливаем нормальные стили
-				arrow1.style.transform = "translate3d(0px, 0px, 0px)";
-				arrow1.style.opacity = "1";
-				arrow1.style.translate = "none";
-				arrow1.style.rotate = "none";
-				arrow1.style.scale = "none";
-			}
-
-			if (arrow2) {
-				gsap.set(arrow2, { clearProps: "all" });
-				// Принудительно устанавливаем нормальные стили
-				arrow2.style.transform = "translate3d(0px, 0px, 0px)";
-				arrow2.style.opacity = "1";
-				arrow2.style.translate = "none";
-				arrow2.style.rotate = "none";
-				arrow2.style.scale = "none";
-			}
+			[arrow1, arrow2].forEach((arrow) => {
+				if (arrow) {
+					gsap.set(arrow, { clearProps: "all" });
+					arrow.style.transform = "translate3d(0px, 0px, 0px)";
+					arrow.style.opacity = "1";
+					arrow.style.translate = "none";
+					arrow.style.rotate = "none";
+					arrow.style.scale = "none";
+				}
+			});
 
 			item.classList.remove("accordion-header", "accordion-content", "accordion-open");
 		});
 
-		// Настройка аккордеона
-		accordionGroups.forEach((group, groupIndex) => {
+		accordionGroups.forEach((group) => {
 			const headerItem = items[group.header];
+			if (!headerItem) return;
 
-			// Настройка заголовка
 			headerItem.classList.add("accordion-header");
 			headerItem.style.display = "block";
 			headerItem.style.cursor = "pointer";
 
-			// Добавляем индикатор внутрь span (если нужно)
 			const headerSpan = headerItem.querySelector("span");
 			if (headerSpan && !headerSpan.querySelector(".accordion-indicator")) {
 				const indicator = document.createElement("span");
@@ -294,7 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				headerSpan.appendChild(indicator);
 			}
 
-			// Настройка содержимого
 			group.content.forEach((contentIndex) => {
 				const contentItem = items[contentIndex];
 				if (contentItem) {
@@ -303,36 +277,24 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			});
 
-			// Обработчик клика
 			headerItem.onclick = () => {
 				const isOpen = headerItem.classList.contains("accordion-open");
 				const headerSpan = headerItem.querySelector("span");
 				const indicator = headerSpan ? headerSpan.querySelector(".accordion-indicator") : null;
 
+				group.content.forEach((contentIndex) => {
+					const contentItem = items[contentIndex];
+					if (contentItem) {
+						contentItem.style.display = isOpen ? "none" : "block";
+					}
+				});
+
 				if (isOpen) {
-					// Закрываем
 					headerItem.classList.remove("accordion-open");
-					if (indicator) {
-						indicator.style.transform = "rotate(0deg)";
-					}
-					group.content.forEach((contentIndex) => {
-						const contentItem = items[contentIndex];
-						if (contentItem) {
-							contentItem.style.display = "none";
-						}
-					});
+					if (indicator) indicator.style.transform = "rotate(0deg)";
 				} else {
-					// Открываем (можно сделать, чтобы закрывались другие группы)
 					headerItem.classList.add("accordion-open");
-					if (indicator) {
-						indicator.style.transform = "rotate(180deg)";
-					}
-					group.content.forEach((contentIndex) => {
-						const contentItem = items[contentIndex];
-						if (contentItem) {
-							contentItem.style.display = "block";
-						}
-					});
+					if (indicator) indicator.style.transform = "rotate(180deg)";
 				}
 			};
 		});
@@ -340,43 +302,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const handleResize = () => {
 		const newIsMobile = window.innerWidth < 768;
-
 		if (newIsMobile !== isMobile) {
 			isMobile = newIsMobile;
-
-			// Отключаем observer при переключении режимов
-			observer.unobserve(section);
-
-			if (isMobile) {
-				setupMobileAccordion();
-			} else {
-				setupDesktop();
-			}
+			if (observer && section) observer.unobserve(section);
+			if (isMobile) setupMobileAccordion();
+			else setupDesktop();
 		}
 	};
 
-	// Intersection Observer для запуска анимации на десктопе
-	let observer = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting && !isMobile && tl && !isAnimationPlayed) {
-					tl.play();
-					observer.unobserve(section);
-				}
-			});
-		},
-		{ threshold: 0.3 }
-	);
-
-	// Первоначальная настройка
-	if (isMobile) {
-		setupMobileAccordion();
-	} else {
-		setupDesktop();
-		observer.observe(section);
+	let observer = null;
+	if (section) {
+		observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && !isMobile && tl && !isAnimationPlayed) {
+						tl.play();
+						if (observer && section) observer.unobserve(section);
+					}
+				});
+			},
+			{ threshold: 0.3 }
+		);
 	}
 
-	// Обработчик изменения размера окна
+	if (isMobile) setupMobileAccordion();
+	else {
+		setupDesktop();
+		if (observer && section) observer.observe(section);
+	}
+
 	let resizeTimer;
 	window.addEventListener("resize", () => {
 		clearTimeout(resizeTimer);
