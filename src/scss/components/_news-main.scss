@@ -23,6 +23,12 @@
 		@media (max-width: 1366px) {
 			margin-bottom: 20px;
 		}
+
+		a {
+			span {
+				color: #fff;
+			}
+		}
 	}
 	&__body {
 		transition: opacity 0.3s;
