@@ -107,21 +107,23 @@
 		&__row {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			padding: 10px 0;
-			border-bottom: 1px solid #eaeaea;
+
+			border-bottom: 2px solid #009cde;
 		}
 		&__name {
 			color: #5d666f;
 			font-size: 18px;
 			font-style: normal;
-			font-weight: 400;
+			font-weight: 500;
 			line-height: 150%;
-
+			padding: 10px 0;
+			border-right: 1px solid #ddd;
 			@media (max-width: $mobile) {
 				font-size: 14px;
 			}
 		}
 		&__value {
+			padding: 10px;
 			color: #212226;
 			font-size: 18px;
 			font-style: normal;
@@ -594,6 +596,10 @@
 			border: 1px solid #ddd;
 			padding: 10px;
 			vertical-align: top;
+		}
+
+		td.name {
+			font-weight: 500;
 		}
 
 		thead th {

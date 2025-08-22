@@ -172,35 +172,41 @@ if (document.querySelector(".about-trust__slider")) {
 	});
 }
 
-if (document.querySelector(".about-clients__slider")) {
-	// Указываем скласс нужного слайдера
-	// Создаем слайдер
-	new Swiper(".about-clients__slider", {
-		// Указываем скласс нужного слайдера
-		// Подключаем модули слайдера
-		// для конкретного случая
-		modules: [Navigation, Pagination, Autoplay],
-		observer: true,
-		observeParents: true,
-		slidesPerView: 3,
-		spaceBetween: 20,
-		autoHeight: false,
-		loop: true,
-		speed: 2000,
-		autoplay: {
-			delay: 0,
-			disableOnInteraction: false,
-		},
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
-		breakpoints: {
-			768: { slidesPerView: 6, spaceBetween: 10 },
-			1024: { slidesPerView: 6, spaceBetween: 20 },
-		},
-	});
-}
+document.addEventListener("watcherCallback", function (e) {
+	const entry = e.detail.entry;
+	const targetElement = entry.target;
+
+	// Проверяем, что это наш слайдер и он появился в зоне видимости
+	if (targetElement.classList.contains("about-clients__slider") && entry.isIntersecting) {
+		// Инициализация слайдера
+		new Swiper(".about-clients__slider", {
+			modules: [Navigation, Pagination, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 20,
+			autoHeight: false,
+			loop: true,
+			speed: 2000,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				768: { slidesPerView: 6, spaceBetween: 10 },
+				1024: { slidesPerView: 6, spaceBetween: 20 },
+			},
+		});
+
+		// Если нужно, чтобы слайдер запускался только один раз
+		// удаляем атрибут data-watch или отключаем наблюдение
+		targetElement.removeAttribute("data-watch");
+	}
+});
 
 let projectsSlider = null;
 let newsSlider = null;
