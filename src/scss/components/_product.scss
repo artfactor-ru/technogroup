@@ -92,6 +92,7 @@
 .specifications {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
 	gap: 140px;
 	margin-bottom: 50px;
 	@media (max-width: $tablet) {
@@ -153,7 +154,6 @@
 
 .application {
 	&__header {
-		max-width: 720px;
 		margin-bottom: 50px;
 		@media (max-width: $tablet) {
 			max-width: 100%;
@@ -283,12 +283,8 @@
 	}
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		gap: 20px;
-
-		@media (max-width: $mobile) {
-			grid-template-columns: repeat(1, 1fr);
-		}
 	}
 	&__box {
 		border-radius: 8px;
@@ -378,14 +374,14 @@
 	&__media {
 		border-radius: 8px;
 		overflow: hidden;
-		margin-bottom: 30px;
 	}
 	&__text {
 		color: #013371;
-		font-size: 16px;
+		font-size: 22px;
 		font-style: normal;
 		font-weight: 800;
 		line-height: normal;
+		margin-bottom: 30px;
 	}
 
 	&__table {
@@ -429,6 +425,18 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 40px;
+
+		&.no-photo {
+			grid-template-columns: repeat(1, 1fr) !important;
+			.description_new {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+
+				@media (max-width: $mobile) {
+					grid-template-columns: repeat(1, 1fr);
+				}
+			}
+		}
 	}
 	&__gallery {
 		display: grid;
